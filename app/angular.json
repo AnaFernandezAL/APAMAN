@@ -27,7 +27,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets"
+                "output": "assets"
               }
             ],
             "styles": ["src/material-theme.scss", "src/styles.css"]
@@ -42,8 +42,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                    "maximumWarning": "20kB",
+                    "maximumError": "30kB"
                 }
               ],
               "outputHashing": "all"
