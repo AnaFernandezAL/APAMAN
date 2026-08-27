@@ -1,0 +1,454 @@
+:host {
+  --apaman-primary: #8e2456;
+  --apaman-primary-hover: #791d49;
+  --apaman-dark: #351b3d;
+  --apaman-secondary: #b52a50;
+  --white: #ffffff;
+
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: 90px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.9fr)
+    minmax(0, auto)
+    minmax(170px, 0.9fr);
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 0 4%;
+
+  background: rgba(255, 253, 250, 0.98);
+
+  border: none;
+  outline: none;
+
+  box-shadow:
+    0 1px 0 rgba(53, 27, 61, 0.035);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+  min-width: 0;
+
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+
+  height: 60px;
+
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+
+  width: auto;
+  height: 50px;
+
+  max-width: 220px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.navigation {
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  overflow: hidden;
+}
+
+.navigation a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  color: #272228;
+
+  text-decoration: none;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: var(--apaman-primary);
+}
+
+.navigation a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 999px;
+
+  background: var(--apaman-primary);
+
+  transition:
+    width 0.2s ease;
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+  width: 42px;
+}
+
+.navigation a.active {
+  color: var(--apaman-primary);
+}
+
+
+/* =========================================================
+   BOTÓN CONTACTO
+========================================================= */
+
+.contact-button {
+  justify-self: end;
+
+  min-width: 150px;
+  height: 44px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
+  border: none;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--apaman-primary),
+      var(--apaman-secondary)
+    );
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow:
+    0 6px 18px rgba(142, 36, 86, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--apaman-primary-hover),
+      var(--apaman-primary)
+    );
+
+  box-shadow:
+    0 9px 22px rgba(142, 36, 86, 0.19);
+}
+
+.contact-button svg {
+  flex: 0 0 auto;
+
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ESCRITORIO MÁS PEQUEÑO / TABLET HORIZONTAL
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .navbar {
+    grid-template-columns:
+      auto
+      minmax(0, 1fr)
+      auto;
+
+    gap: 18px;
+
+    padding: 0 3%;
+
+    height: 84px;
+  }
+
+  .navigation {
+    gap: 20px;
+  }
+
+  .navigation a {
+    font-size: 13px;
+  }
+
+  .navigation a::after {
+    bottom: 14px;
+  }
+
+  .brand {
+    height: 56px;
+  }
+
+  .brand img {
+    height: 46px;
+
+    max-width: 190px;
+  }
+
+  .contact-button {
+    min-width: 140px;
+    height: 42px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
+
+  .contact-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET VERTICAL
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: auto;
+    min-height: 78px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding:
+      10px
+      24px;
+
+    overflow: hidden;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .brand {
+    min-width: 0;
+
+    height: 54px;
+  }
+
+  .brand img {
+    width: auto;
+    height: 46px;
+
+    max-width: 210px;
+  }
+
+  .contact-button {
+    flex: 0 0 auto;
+
+    min-width: auto;
+    height: 42px;
+
+    padding:
+      0
+      16px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    min-height: 72px;
+
+    gap: 12px;
+
+    padding:
+      9px
+      16px;
+  }
+
+  .brand {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 50px;
+  }
+
+  .brand img {
+    width: auto;
+    height: 43px;
+
+    max-width: 170px;
+  }
+
+  .contact-button {
+    flex:
+      0
+      0
+      42px;
+
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: 13px;
+  }
+
+  .contact-button span {
+    display: none;
+  }
+
+  .contact-button svg {
+    width: 19px;
+    height: 19px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    min-height: 68px;
+
+    padding:
+      8px
+      12px;
+  }
+
+  .brand {
+    height: 46px;
+  }
+
+  .brand img {
+    max-width: 145px;
+    height: 39px;
+  }
+
+  .contact-button {
+    flex-basis: 40px;
+
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+  }
+
+}

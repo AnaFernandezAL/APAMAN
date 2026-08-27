@@ -1,0 +1,1723 @@
+:host {
+  --apaman-primary: #8e2456;
+  --apaman-primary-dark: #702044;
+  --apaman-secondary: #b52a50;
+
+  --apaman-dark: #351b3d;
+
+  --apaman-orange: #f58b38;
+  --apaman-gold: #f6a827;
+  --apaman-yellow: #ffd218;
+
+  --background: #fbf8f3;
+  --background-light: #fffdfa;
+  --background-card: #f9f5ef;
+
+  --text-primary: #302a30;
+  --text-secondary: #625c60;
+
+  --line-soft: rgba(53, 27, 61, 0.09);
+
+  display: block;
+  width: 100%;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+    PÁGINA
+========================================================= */
+
+.help-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  color: var(--text-primary);
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdfa 0%,
+      var(--background) 100%
+    );
+}
+
+
+/* =========================================================
+    HERO
+========================================================= */
+
+.help-hero {
+  width: 100%;
+  min-height: 355px;
+
+  display: grid;
+  grid-template-columns: 35% 65%;
+
+  background: #fffdfa;
+}
+
+
+/* TEXTO */
+
+.help-hero__content {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    40px
+    7%
+    40px
+    10%;
+}
+
+
+.help-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+
+  color: var(--apaman-primary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.15px;
+}
+
+
+.help-eyebrow svg {
+  width: 34px;
+  height: 34px;
+
+  fill: rgba(142, 36, 86, 0.04);
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.help-hero h1 {
+  margin:
+    0
+    0
+    18px;
+
+  color: var(--apaman-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(48px, 5vw, 65px);
+  font-weight: 400;
+
+  line-height: 1.04;
+
+  letter-spacing: -2px;
+}
+
+
+.help-hero h1 span {
+  display: block;
+}
+
+
+.help-hero__description {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* FRASE */
+
+.help-hero__thanks {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin:
+    18px
+    0
+    0;
+
+  color: var(--apaman-primary);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  font-style: italic;
+}
+
+
+.help-hero__thanks svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.3;
+}
+
+
+/* =========================================================
+    HERO FOTO
+========================================================= */
+
+.help-hero__visual {
+  position: relative;
+
+  min-width: 0;
+  min-height: 355px;
+
+  overflow: visible;
+}
+
+
+.help-hero__visual > img {
+  display: block;
+
+  width: 100%;
+  height: 355px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: 0;
+}
+
+
+/* DEGRADADO */
+
+.help-hero__visual::before {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 160px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fffdfa 0%,
+      rgba(255, 253, 250, 0.72) 30%,
+      rgba(255, 253, 250, 0) 100%
+    );
+}
+
+
+/* MENSAJE FLOTANTE */
+
+.help-hero__message {
+  position: absolute;
+  z-index: 4;
+
+  left: 17%;
+  bottom: 7px;
+
+  width: 365px;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius:
+    44px
+    12px
+    12px
+    44px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--apaman-primary-dark),
+      var(--apaman-primary)
+    );
+
+  box-shadow:
+    0 10px 28px
+    rgba(53, 27, 61, 0.15);
+}
+
+
+.help-hero__message-icon {
+  flex: 0 0 auto;
+
+  width: 79px;
+  height: 79px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: -1px;
+
+  border-radius: 50%;
+
+  background: #fbf8f3;
+}
+
+
+.help-hero__message-icon svg {
+  width: 41px;
+  height: 41px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.4;
+}
+
+
+.help-hero__message p {
+  margin:
+    0
+    21px;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+.help-hero__message strong {
+  display: block;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+    FORMAS DE COLABORAR
+========================================================= */
+
+.ways-section {
+  width: calc(100% - 80px);
+  max-width: 1280px;
+
+  margin:
+    0
+    auto;
+
+  padding:
+    27px
+    25px
+    20px;
+}
+
+
+.section-title--center {
+  text-align: center;
+}
+
+
+.section-title__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+}
+
+
+.section-title__heading svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.3;
+}
+
+
+.section-title h2 {
+  margin: 0;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+.section-title > p {
+  margin:
+    7px
+    0
+    0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+}
+
+
+/* FORMAS */
+
+.ways-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  margin-top: 20px;
+}
+
+
+.way-item {
+  position: relative;
+
+  min-height: 108px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding:
+    0
+    17px;
+
+  text-align: center;
+}
+
+
+.way-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 10px;
+
+  width: 1px;
+  height: 83px;
+
+  background:
+    rgba(53, 27, 61, 0.1);
+}
+
+
+.way-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 9px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7f1ea,
+      #f3ebe3
+    );
+}
+
+
+.way-icon svg {
+  width: 34px;
+  height: 34px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.way-item p {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+.way-item p span {
+  display: block;
+}
+
+
+/* =========================================================
+    MONETARIAS
+========================================================= */
+
+.monetary-section {
+  width: calc(100% - 90px);
+  max-width: 1280px;
+
+  margin:
+    0
+    auto;
+
+  padding:
+    17px
+    20px
+    22px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.45);
+}
+
+
+.monetary-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-bottom: 18px;
+}
+
+
+.monetary-title span {
+  width: 54px;
+  height: 1px;
+
+  background:
+    rgba(142, 36, 86, 0.25);
+}
+
+
+.monetary-title h2 {
+  margin: 0;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 23px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+    GRID PRINCIPAL
+========================================================= */
+
+.monetary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 15px;
+}
+
+
+.donation-card,
+.other-help-card {
+  min-height: 280px;
+
+  padding:
+    20px
+    21px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(249, 245, 240, 0.83)
+    );
+
+  box-shadow:
+    0 7px 25px
+    rgba(53, 27, 61, 0.025);
+}
+
+
+/* TÍTULOS DE TARJETAS */
+
+.card-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+}
+
+
+.card-icon {
+  flex: 0 0 auto;
+
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #f4ede6;
+}
+
+
+.card-icon svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.card-heading h3 {
+  margin: 0;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.donation-card > p,
+.other-help-card > p {
+  margin:
+    0
+    0
+    15px;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+    SINPE
+========================================================= */
+
+.sinpe-box {
+  min-height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    15px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf6f1,
+      #f5eee7
+    );
+}
+
+
+.sinpe-box > span {
+  margin-bottom: 12px;
+
+  color: var(--text-primary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+}
+
+
+.sinpe-box strong {
+  color: var(--apaman-primary);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+.sinpe-box small {
+  max-width: 180px;
+
+  margin-top: 10px;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+    BANCO
+========================================================= */
+
+.bank-box {
+  min-height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    20px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf6f1,
+      #f5eee7
+    );
+}
+
+
+.bank-box strong {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+}
+
+
+.bank-box p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+    BENEFICIOS
+========================================================= */
+
+.donation-card--benefits {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(248, 244, 239, 0.98),
+      rgba(242, 237, 231, 0.96)
+    );
+}
+
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin:
+    17px
+    0
+    0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.benefits-list li {
+  display: grid;
+
+  grid-template-columns:
+    17px
+    1fr;
+
+  gap: 9px;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+
+.benefits-list li > span {
+  width: 14px;
+  height: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  color: var(--apaman-primary);
+
+  background:
+    rgba(142, 36, 86, 0.07);
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+.benefits-thanks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 14px;
+
+  margin-top: 20px;
+}
+
+
+.benefits-thanks p {
+  margin: 0;
+
+  color: var(--apaman-primary);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  font-style: italic;
+}
+
+
+.benefits-thanks svg {
+  width: 30px;
+  height: 30px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.3;
+}
+
+
+/* =========================================================
+    SEGUNDA FILA
+========================================================= */
+
+.other-help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+.other-help-card ul {
+  margin:
+    3px
+    0
+    15px;
+
+  padding-left: 17px;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9.7px;
+
+  line-height: 1.55;
+}
+
+
+.other-help-card li::marker {
+  color: var(--apaman-primary);
+}
+
+
+/* NOTA BIENES */
+
+.help-note {
+  display: grid;
+
+  grid-template-columns:
+    45px
+    1fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    10px
+    13px;
+
+  border-radius: 11px;
+
+  background: #f5eee7;
+}
+
+
+.help-note__icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+
+.help-note__icon svg {
+  width: 24px;
+  height: 24px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.25;
+}
+
+
+.help-note p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+    CAFÉ
+========================================================= */
+
+.coffee-card {
+  text-align: left;
+}
+
+
+.coffee-image {
+  width: 100%;
+  height: 115px;
+
+  margin-top: 7px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+
+.coffee-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.coffee-caption {
+  margin:
+    9px
+    0
+    0 !important;
+
+  text-align: center;
+
+  font-size: 9px !important;
+}
+
+
+/* =========================================================
+    CAMPAÑAS
+========================================================= */
+
+.campaign-message {
+  position: relative;
+
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    20px
+    35px
+    20px
+    20px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7f1eb,
+      #f2ebe3
+    );
+}
+
+
+.campaign-message p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+.campaign-message svg {
+  position: absolute;
+
+  right: -5px;
+  bottom: -5px;
+
+  width: 46px;
+  height: 46px;
+
+  fill: none;
+
+  stroke:
+    rgba(142, 36, 86, 0.5);
+
+  stroke-width: 1.2;
+}
+
+
+/* =========================================================
+    TRANSPARENCIA
+========================================================= */
+
+.trust-section {
+  position: relative;
+
+  width: calc(100% - 90px);
+  max-width: 1280px;
+
+  min-height: 115px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  margin:
+    16px
+    auto
+    0;
+
+  padding:
+    18px
+    140px
+    18px
+    24px;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #faf6f1,
+      #fffdfa
+    );
+}
+
+
+.trust-info {
+  display: grid;
+
+  grid-template-columns:
+    60px
+    1fr;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+
+.trust-icon {
+  width: 57px;
+  height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #f1e9e1;
+}
+
+
+.trust-icon svg {
+  width: 34px;
+  height: 34px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.25;
+}
+
+
+.trust-info h2 {
+  margin:
+    0
+    0
+    7px;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+.trust-info p,
+.trust-contact p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9.7px;
+
+  line-height: 1.6;
+}
+
+
+.trust-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 30px;
+
+  border-left:
+    1px solid
+    var(--line-soft);
+}
+
+
+.contact-cta {
+  width: fit-content;
+
+  min-width: 135px;
+  min-height: 36px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 10px;
+
+  padding:
+    0
+    15px;
+
+  border-radius: 11px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--apaman-primary-dark),
+      var(--apaman-primary)
+    );
+
+  text-decoration: none;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.contact-cta svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.trust-plant {
+  position: absolute;
+
+  right: 7px;
+  bottom: -50px;
+
+  width: 145px;
+  height: 165px;
+
+  fill:
+    rgba(142, 36, 86, 0.035);
+
+  stroke:
+    rgba(142, 36, 86, 0.17);
+
+  stroke-width: 1.2;
+}
+
+
+/* =========================================================
+    CIERRE
+========================================================= */
+
+.help-closing {
+  padding:
+    24px
+    20px
+    25px;
+
+  text-align: center;
+}
+
+
+.help-closing__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+}
+
+
+.help-closing__title svg {
+  width: 34px;
+  height: 34px;
+
+  fill: none;
+
+  stroke: var(--apaman-primary);
+
+  stroke-width: 1.25;
+}
+
+
+.help-closing h2 {
+  margin: 0;
+
+  color: var(--apaman-primary-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+.help-closing > p {
+  margin:
+    6px
+    0
+    0;
+
+  color: var(--text-secondary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+    TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .help-hero {
+    grid-template-columns:
+      42%
+      58%;
+  }
+
+
+  .ways-section,
+  .monetary-section,
+  .trust-section {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .ways-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    row-gap: 25px;
+  }
+
+
+  .way-item:nth-child(3)::after {
+    display: none;
+  }
+
+
+  .monetary-grid,
+  .other-help-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .donation-card--benefits,
+  .campaigns-card {
+    grid-column:
+      1 / -1;
+  }
+
+
+  .trust-section {
+    padding-right: 100px;
+  }
+
+}
+
+
+/* =========================================================
+    TABLET VERTICAL
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .help-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .help-hero__content {
+    min-height: 370px;
+
+    padding:
+      55px
+      8%;
+  }
+
+
+  .help-hero__visual {
+    min-height: auto;
+  }
+
+
+  .help-hero__visual > img {
+    height: 420px;
+  }
+
+
+  .help-hero__visual::before {
+    display: none;
+  }
+
+
+  .help-hero__message {
+    left: 50%;
+
+    bottom: -25px;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .ways-section {
+    padding-top: 55px;
+  }
+
+
+  .ways-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .way-item::after {
+    display: none;
+  }
+
+
+  .monetary-grid,
+  .other-help-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .donation-card--benefits,
+  .campaigns-card {
+    grid-column: auto;
+  }
+
+
+  .trust-section {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding:
+      25px
+      100px
+      25px
+      25px;
+  }
+
+
+  .trust-contact {
+    padding-left: 0;
+
+    border-left: 0;
+  }
+
+}
+
+
+/* =========================================================
+    CELULAR
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .help-hero__content {
+    min-height: auto;
+
+    padding:
+      50px
+      23px;
+  }
+
+
+  .help-hero h1 {
+    font-size: 45px;
+  }
+
+
+  .help-hero__description {
+    font-size: 13px;
+  }
+
+
+  .help-hero__visual > img {
+    height: 310px;
+  }
+
+
+  .help-hero__message {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    transform: none;
+
+    width: calc(100% - 30px);
+
+    margin:
+      -30px
+      auto
+      0;
+  }
+
+
+  .ways-section {
+    width: 100%;
+
+    padding:
+      45px
+      18px
+      20px;
+  }
+
+
+  .ways-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 25px;
+  }
+
+
+  .way-item {
+    min-height: auto;
+
+    padding:
+      14px
+      0;
+
+    border-bottom:
+      1px solid
+      var(--line-soft);
+  }
+
+
+  .way-item:last-child {
+    border-bottom: 0;
+  }
+
+
+  .monetary-section {
+    width: calc(100% - 24px);
+
+    padding:
+      18px
+      12px;
+  }
+
+
+  .monetary-title {
+    gap: 12px;
+  }
+
+
+  .monetary-title span {
+    width: 30px;
+  }
+
+
+  .monetary-title h2 {
+    font-size: 20px;
+  }
+
+
+  .donation-card,
+  .other-help-card {
+    min-height: auto;
+  }
+
+
+  .trust-section {
+    width: calc(100% - 24px);
+
+    padding:
+      24px
+      20px;
+  }
+
+
+  .trust-plant {
+    opacity: 0.4;
+  }
+
+
+  .help-closing h2 {
+    font-size: 18px;
+  }
+
+}
